@@ -15,8 +15,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const tlsOptions = {
-  key: await readFile("./mtls/server-key.pem"),
-  cert: await readFile("./mtls/server-cert.pem"),
+  key: await readFile("./mtls-outbound/server-key.pem"),
+  cert: await readFile("./mtls-outbound/server-cert.pem"),
 
   // Trust this specific self-signed client certificate.
   ca: await readFile("./mtls/client-cert.pem"),
