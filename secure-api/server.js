@@ -19,7 +19,7 @@ const tlsOptions = {
   cert: await readFile("./mtls-outbound/server-cert.pem"),
 
   // Trust this specific self-signed client certificate.
-  ca: await readFile("./mtls/client-cert.pem"),
+ ca: await readFile("./mtls-outbound/client-cert.pem"),
 
   // Require and validate the client's certificate.
   requestCert: true,
